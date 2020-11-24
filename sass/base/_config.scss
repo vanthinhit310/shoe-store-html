@@ -1,0 +1,44 @@
+body{
+    font-family: $BuenosAiresTTF-Regular;
+    line-height: 1.5;
+    @include fontSize(15);
+    color: $C_TEXT;
+    background-color: $C_WHITE;
+}
+
+
+.container {
+    @media (min-width: 1600px) {
+        max-width: 1500px;
+    }
+    @media (min-width: 1200px) and (max-width: 1599px) {
+        max-width: 95%;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        max-width: 100%;
+    }
+    @media (min-width: 320px) and (max-width: 991px) {
+        max-width: 100%;
+    }
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+*{
+    outline: none !important;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+       text-decoration: none; 
+    }
+}
+
+button{
+    box-shadow: none;
+}
