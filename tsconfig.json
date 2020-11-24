@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module" : "None",
+        "declaration": false,
+        "noImplicitAny": false,
+        "inlineSourceMap": true,
+        "moduleResolution": "node",
+        "outFile": "js/common.js",
+        "removeComments" : true
+    },
+    "include": ["ts/*"]
+}
