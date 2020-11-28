@@ -1,3 +1,143 @@
 // File: _header.scss
 // File này chứa tất cả code Sass style cho header.
 /* STYLES GO HERE */
+.MainMenuWrapper {
+    .MainMenuContent {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .Logo {
+            @include flex(15%);
+        }
+
+        .RightMenu {
+            @include flex(70%);
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+
+            .Top {
+                ul.Menu {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+
+                    li.MenuItem {
+                        flex: 1;
+
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                            padding: 10px 15px;
+
+                            span {
+                                display: block;
+                            }
+
+                            span.Icon {
+                                img {
+                                    display: block;
+                                    margin: 0 auto;
+                                    max-width: 50px;
+                                }
+                            }
+                            span.Text {
+                                font-family: $Roboto;
+                                font-weight: 500;
+                                color: $C_373737;
+                            }
+                        }
+                    }
+
+                    .CartText {
+                        a {
+                            display: flex;
+                            align-items: flex-end !important;
+                            justify-content: flex-end;
+                            span.CartIcon {
+                                display: block;
+                                position: relative;
+                                color: $C_373737;
+
+                                svg,
+                                i {
+                                    font-size: 20px;
+                                }
+
+                                .CartCount {
+                                    display: block;
+                                    background-color: $C_373737;
+                                    color: $C_WHITE;
+                                    padding: 1px 5px;
+                                    border-radius: 15px;
+                                    font-family: $BuenosAiresTTF-Light;
+                                    font-size: 11px;
+                                    position: absolute;
+                                    bottom: 75%;
+                                    left: 75%;
+                                    z-index: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Bot {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: right;
+
+                .SearchBar {
+                    @include flex(65%);
+
+                    .Input {
+                        width: 100%;
+                        display: flex;
+                        position: relative;
+                        border: solid 1px $C_Border;
+                        padding: 5px 15px;
+                        border-radius: 40px;
+
+                        input {
+                            outline: none;
+                            box-shadow: none;
+                            color: $C_555;
+                            border: none;
+                            line-height: 1;
+                        }
+                    }
+                }
+
+                .Hotline {
+                    @include flex(30%);
+                    margin-left: 40px;
+                    a {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        span {
+                            display: block;
+                            color: $C_373737;
+                        }
+
+                        .Icon {
+                            margin-right: 5px;
+                            background-color: $C_EBG;
+                            padding: 7px 12px;
+                            border-radius: 50%;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
