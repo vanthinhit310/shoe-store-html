@@ -2,6 +2,14 @@
     @include fontSize(12);
 }
 
+.font13{
+    @include fontSize(13);
+}
+
+.font14{
+    @include fontSize(14);
+}
+
 .bueno-regular{
     font-family: $BuenosAiresTTF-Regular;
 }
