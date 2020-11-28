@@ -63,7 +63,7 @@
                         }
                     }
 
-                    .CartText {
+                    li.CartText {
                         a {
                             display: flex;
                             align-items: flex-end !important;
@@ -84,7 +84,7 @@
                                     color: $C_WHITE;
                                     padding: 1px 5px;
                                     border-radius: 15px;
-                                    font-family: $BuenosAiresTTF-Light;
+                                    font-family: $Roboto;
                                     font-size: 11px;
                                     position: absolute;
                                     bottom: 75%;
@@ -93,6 +93,126 @@
                                 }
                             }
                         }
+                    }
+
+                    li.HasDropdownMenu{
+                        position: relative;
+                        
+                        .DropdownMenu{
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background-color: $C_WHITE;
+                            visibility: hidden; /* hides sub-menu */
+                            opacity: 0;
+                            transform: translateY(-2em);
+                            z-index: 2;
+                            transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+                            ul.Dropdown{
+                                width: 200px;
+                                -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                -moz-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                border-top: none;
+                                .DropdownItem{
+                                    padding: 8px 15px;
+                                    background-color: $C_WHITE;
+                                    @include transition(background-color linear .15s);
+                                    cursor: pointer;
+                                    a{
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        font-family: $Roboto;
+                                        padding: 0;
+                                        text-align: left;
+                                        span{
+                                            display: block;
+                                            text-transform: uppercase;
+                                            color: $C_373737;
+                                            
+                                            svg,i{
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                    &:hover{
+                                        background-color: $C_EBG;
+                                    }
+                                }
+                                
+                                .HasSubMenu{
+                                    position: relative;
+                                    .SubMenuContent{
+                                        position: absolute;
+                                        top: 0;
+                                        left: 100%;
+                                        background-color: $C_WHITE;
+                                        visibility: hidden; /* hides sub-menu */
+                                        opacity: 0;
+                                        transform: translateX(10px);
+                                        z-index: 2;
+                                        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+                                        ul.SubMenu{
+                                            width: 200px;
+                                            -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                            -moz-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                            box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                            .SubMenuItem{
+                                                padding: 8px 15px;
+                                                background-color: $C_WHITE;
+                                                @include transition(background-color linear .15s);
+                                                cursor: pointer;
+                                                a{
+                                                    display: flex;
+                                                    align-items: flex-start;
+                                                    justify-content: flex-start;
+                                                    font-family: $Roboto;
+                                                    padding: 0;
+                                                    text-align: left;
+                                                    span{
+                                                        display: block;
+                                                        text-transform: uppercase;
+                                                        color: $C_373737;
+
+                                                        svg,i{
+                                                            margin-right: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                &:hover{
+                                                    background-color: $C_EBG;
+                                                }
+                                            }
+
+                                            .HasSubMenu{
+                                                position: relative;
+
+                                            }
+                                        }
+                                    }
+
+                                    &:hover{
+                                        .SubMenuContent{
+                                            visibility: visible; /* shows sub-menu */
+                                            opacity: 1;
+                                            transform: translateX(0%);
+                                            transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        &:hover{
+                            .DropdownMenu{
+                                visibility: visible; /* shows sub-menu */
+                                opacity: 1;
+                                transform: translateY(0%);
+                                transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+                            }
+                        }
+                        
                     }
                 }
             }

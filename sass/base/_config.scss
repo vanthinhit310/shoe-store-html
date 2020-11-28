@@ -1,6 +1,7 @@
 body{
-    font-family: $BuenosAiresTTF-Regular;
+    font-family: $Roboto;
     line-height: 1.5;
+    font-weight: 400;
     @include fontSize(15);
     color: $C_TEXT;
     background-color: $C_WHITE;
