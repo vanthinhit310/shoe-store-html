@@ -8,7 +8,6 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-
         .Logo {
             @include flex(15%);
             a{
@@ -265,6 +264,36 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+section.Header.fixed{
+    .MainMenuWrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 3;
+        background-color: $C_WHITE;
+        height: auto;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        animation: smoothScroll 1s forwards;
+        .RightMenu{
+            .Bot{
+                @include transition(all linear .3s);
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
             }
         }
     }
