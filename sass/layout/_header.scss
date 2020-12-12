@@ -2,6 +2,9 @@
 // File này chứa tất cả code Sass style cho header.
 /* STYLES GO HERE */
 .MainMenuWrapper {
+    @include maxWidth(991){
+        display: none;
+    }
     .MainMenuContent {
         display: flex;
         flex-direction: row;
@@ -18,6 +21,7 @@
                     max-width: 189px;
                 }
             }
+            
         }
 
         .RightMenu {
@@ -90,6 +94,11 @@
                                     left: 75%;
                                     z-index: 1;
                                 }
+                            }
+                            
+                            @include maxWidth(1200){
+                                justify-content: center !important;
+                                align-items: center !important;
                             }
                         }
                     }
@@ -241,6 +250,10 @@
                             line-height: 1;
                         }
                     }
+                    
+                    @include maxWidth(1200){
+                        @include flex(50%);
+                    }
                 }
 
                 .Hotline {
@@ -263,7 +276,15 @@
                             font-size: 12px;
                         }
                     }
+
+                    @include maxWidth(1200){
+                        @include flex(45%);
+                    }
                 }
+            }
+            
+            @include maxWidth(1200){
+                @include flex(80%);
             }
         }
     }
@@ -296,5 +317,140 @@ section.Header.fixed{
                 max-height: 0;
             }
         }
+    }
+}
+
+
+.menu-mobile{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    .menu {
+        background: $C_BLACK;
+        color: $C_WHITE;
+        height: 80px;
+        padding: 5px 10px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        a.logo{
+            display: inline-flex;
+            img{
+                max-width: 150px;
+            }
+        }
+    }
+
+    .menu-txt {
+        margin: 8px 0 0 5px;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .menu-btn {
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    .line {
+        background: $C_WHITE;
+        display: block;
+        width: 50px;
+        height: 5px;
+        float: right;
+        clear: right;
+        margin: 5px 0;
+    }
+
+    .hid {
+        transform: rotateZ(225deg);
+        transition: all .2s ease;
+        position: absolute;
+        background: rgba(0, 0, 0, 0);
+        margin: 20px 0 0 0;
+    }
+
+    .hid.animate {
+        background: $C_WHITE;
+        transform: rotateZ(315deg);
+        transition: all .25s ease .2s;
+    }
+
+    .second {
+        transform: rotateZ(0deg);
+        transition: all .5s ease;
+        background: $C_WHITE;
+    }
+
+    .second.animate {
+        transform: rotateZ(225deg);
+        transition: all .5s ease;
+    }
+
+    .first,
+    .third {
+        transition: all .5s ease-out;
+    }
+
+    .third {
+        left: 0;
+        float: left;
+    }
+
+    .first.animate,
+    .third.animate {
+        width: 0;
+        transition: all .3s ease-out;
+    }
+
+    .slideout {
+        display: block;
+        background: $C_BLACK;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: -100%;
+        z-index: 6;
+        height: 100vh;
+        @include transition(left ease-out .3s);
+    }
+    
+    .slideout.open{
+        left: 0;
+        @include transition(left ease-in .3s);
+    }
+
+    .slideout li:first-child {
+        border-top: thin solid #333;
+    }
+
+    .slideout li {
+        color: $C_WHITE;
+        padding: 19px;
+        border-bottom: thin solid #333;
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+
+    .slideout li:hover {
+        background: #151515;
+        transition: all .2s ease;
+
     }
 }
