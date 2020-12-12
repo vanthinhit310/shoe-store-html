@@ -150,6 +150,10 @@
         justify-content: center;
         margin: 50px 0 30px;
         
+        @include maxWidth(991){
+            margin: 25px 0;
+        }
+        
         .button{
             @include transition( all linear .2s);
             &:hover{
