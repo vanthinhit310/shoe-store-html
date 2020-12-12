@@ -1,4 +1,4 @@
-body{
+body {
     font-family: $Roboto;
     line-height: 1.5;
     font-weight: 400;
@@ -23,36 +23,37 @@ body{
     }
 }
 
-ul{
+ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-*{
+* {
     outline: none !important;
 }
 
-a{
+a {
     text-decoration: none;
-    &:hover{
-       text-decoration: none; 
+
+    &:hover {
+        text-decoration: none;
     }
 }
 
-button{
+button {
     box-shadow: none;
     background-color: unset;
-    border:none;
+    border: none;
 }
 
-.PageContent{
+.PageContent {
     margin-top: 30px;
-    
-    @include maxWidth(991){
+
+    @include maxWidth(991) {
         margin-top: 60px;
     }
-    @include maxWidth(576){
+    @include maxWidth(576) {
         margin-top: 50px;
     }
 }
