@@ -52,4 +52,7 @@ button{
     @include maxWidth(991){
         margin-top: 60px;
     }
+    @include maxWidth(576){
+        margin-top: 50px;
+    }
 }

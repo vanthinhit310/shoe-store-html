@@ -51,15 +51,39 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 20px 50px;
             
+            @include maxWidth(767){
+                grid-template-columns: repeat(1, 1fr);
+                gap: 30px 0px;
+            }
+            
             .NewsItem{
                 padding: 15px;
                 border-radius: 5px;
                 border: solid 1px $C_Border;
+                background-color: $C_WHITE;
                 @include transition(all linear .2s);
+                
+                @include maxWidth(767){
+                    max-width: 90%;
+                }
+                @include maxWidth(576){
+                    max-width: 94%;
+                }
+                
                 &:nth-child(2n){
                     transform: translateY(25px);
+
+                    @include maxWidth(767){
+                        margin-left: auto;
+                        transform: translateY(0);
+                    }
+                    
                     &:hover{
                         transform: translateY(20px);
+
+                        @include maxWidth(767){
+                            transform: translateY(-1px);
+                        }
                     }
                     
                 }
@@ -76,6 +100,29 @@
                     }
                     span.image{
                         margin: 10px 0;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        height: 0;
+                        width: 100%;
+                        display: block;
+                        padding-bottom: calc(30% * 1.5);
+                        
+                        @include maxWidth(991){
+                            padding-bottom: calc(30% * 1.8);
+                        }
+
+                        @include maxWidth(767){
+                            padding-bottom: calc(30% * 1.5);
+                        }
+
+                        @include maxWidth(576){
+                            padding-bottom: calc(30% * 1.6);
+                        }
+
+                        @include maxWidth(430){
+                            padding-bottom: calc(30% * 1.8);
+                        }
                     }
                     span.description{
                         text-align: justify;
