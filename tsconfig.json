@@ -3,7 +3,7 @@
         "target": "es2015",
         "module" : "None",
         "declaration": false,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "inlineSourceMap": true,
         "moduleResolution": "node",
         "outFile": "js/common.js",

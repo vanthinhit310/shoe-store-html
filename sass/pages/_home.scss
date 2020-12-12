@@ -1,20 +1,21 @@
-.HomeWrapper{
+.HomeWrapper {
     /*Banner Slide*/
-    .BannerSlide{
-        .SwiperContainer{
-            .SwiperWrapper{
-                .SwiperSlide{
+    .BannerSlide {
+        .SwiperContainer {
+            .SwiperWrapper {
+                .SwiperSlide {
                     width: 100%;
                     height: 0;
                     padding-bottom: calc(30% * 1.2);
                     cursor: pointer;
-                    @include maxWidth(767){
+                    @include maxWidth(767) {
                         padding-bottom: calc(30% * 1.6);
                     }
-                    @include maxWidth(576){
+                    @include maxWidth(576) {
                         padding-bottom: calc(30% * 2.2);
                     }
-                    a{
+
+                    a {
                         display: block;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -22,10 +23,10 @@
                         width: 100%;
                         height: 100%;
                         padding-bottom: calc(30% * 1.2);
-                        @include maxWidth(767){
+                        @include maxWidth(767) {
                             padding-bottom: calc(30% * 1.6);
                         }
-                        @include maxWidth(576){
+                        @include maxWidth(576) {
                             padding-bottom: calc(30% * 2.2);
                         }
                     }
@@ -33,13 +34,14 @@
             }
         }
     }
+
     /*Banner Slide*/
-    
+
     /*News List*/
-    .HomeNews{
+    .HomeNews {
         margin: 30px 0;
-        
-        ul.HomeList{
+
+        ul.HomeList {
             background-image: url('../img/line.png');
             background-position: center;
             background-repeat: repeat-y;
@@ -50,114 +52,120 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px 50px;
-            
-            @include maxWidth(767){
+
+            @include maxWidth(767) {
                 grid-template-columns: repeat(1, 1fr);
                 gap: 30px 0px;
             }
-            
-            .NewsItem{
+
+            .NewsItem {
                 padding: 15px;
                 border-radius: 5px;
                 border: solid 1px $C_Border;
                 background-color: $C_WHITE;
                 @include transition(all linear .2s);
-                
-                @include maxWidth(767){
+
+                @include maxWidth(767) {
                     max-width: 90%;
                 }
-                @include maxWidth(576){
+                @include maxWidth(576) {
                     max-width: 94%;
                 }
-                
-                &:nth-child(2n){
+
+                &:nth-child(2n) {
                     transform: translateY(25px);
 
-                    @include maxWidth(767){
+                    @include maxWidth(767) {
                         margin-left: auto;
                         transform: translateY(0);
                     }
-                    
-                    &:hover{
+
+                    &:hover {
                         transform: translateY(20px);
 
-                        @include maxWidth(767){
+                        @include maxWidth(767) {
                             transform: translateY(-1px);
                         }
                     }
-                    
+
                 }
-                
-                a{
+
+                a {
                     display: block;
-                    h3.title{
+
+                    h3.title {
                         font-weight: 700;
                         color: $C_BLACK;
                     }
 
-                    span{
+                    span {
                         display: block;
                     }
-                    span.image{
+
+                    span.image {
                         margin: 10px 0;
                         width: 100%;
                         display: block;
-                        
-                        img{
-                            @include maxWidth(375){
+
+                        img {
+                            @include maxWidth(375) {
                                 min-height: 150px;
                                 object-fit: cover;
                                 object-position: center;
                             }
                         }
                     }
-                    span.description{
+
+                    span.description {
                         text-align: justify;
                         color: $C_TEXT;
                     }
                 }
-                
-                &:hover{
+
+                &:hover {
                     transform: translateY(-5px);
-                    box-shadow: 0 1px 2px rgba(0,0,0,0.07),
-                    0 2px 4px rgba(0,0,0,0.07),
-                    0 4px 8px rgba(0,0,0,0.07),
-                    0 8px 16px rgba(0,0,0,0.07),
-                    0 16px 32px rgba(0,0,0,0.07),
-                    0 32px 64px rgba(0,0,0,0.07);
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                    0 2px 4px rgba(0, 0, 0, 0.07),
+                    0 4px 8px rgba(0, 0, 0, 0.07),
+                    0 8px 16px rgba(0, 0, 0, 0.07),
+                    0 16px 32px rgba(0, 0, 0, 0.07),
+                    0 32px 64px rgba(0, 0, 0, 0.07);
                 }
             }
         }
     }
+
     /*News List*/
-    
+
     /*Load more*/
-    .LoadMore{
+    .LoadMore {
         display: flex;
         justify-content: center;
         margin: 50px 0 30px;
-        
-        @include maxWidth(767){
+
+        @include maxWidth(767) {
             margin: 25px 0;
         }
-        
-        .button{
-            @include transition( all linear .2s);
-            &:hover{
-                box-shadow: 0 1px 2px rgba(0,0,0,0.07),
-                0 2px 4px rgba(0,0,0,0.07),
-                0 4px 8px rgba(0,0,0,0.07),
-                0 8px 16px rgba(0,0,0,0.07),
-                0 16px 32px rgba(0,0,0,0.07),
-                0 32px 64px rgba(0,0,0,0.07);
-                
-                svg{
+
+        .button {
+            @include transition(all linear .2s);
+
+            &:hover {
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07),
+                0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07),
+                0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
+
+                svg {
                     transform: rotate(360deg);
                 }
             }
         }
     }
+
     /*Load more*/
-    
+
 }
 

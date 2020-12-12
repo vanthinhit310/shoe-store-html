@@ -29,4 +29,4 @@ const ANM = {
 // @ts-ignore
 $(document).ready(function () {
     ANM.refreshIcon();
-})
+});
