@@ -23,12 +23,26 @@
                 text-align: center;
                 img{
                     max-width: 189px;
+                    
+                    @include maxWidth(767){
+                        max-width: 150px;
+                    }
+                    @include maxWidth(576){
+                        max-width: 102px;
+                    }
                 }
             }
             h3.FooterSlogan{
                 font-size: 30px;
                 color: $C_WHITE;
                 font-weight: 600;
+
+                @include maxWidth(767){
+                    font-size: 24px;
+                }
+                @include maxWidth(576){
+                    font-size: 18px;
+                }
             }
             
             .FooterMenu{
@@ -38,19 +52,37 @@
                     flex-direction: row;
                     justify-content: space-between;
                     border-bottom: solid 2px $C_WHITE;
+                    @include maxWidth(767){
+                        flex-wrap: wrap;
+                    }
                     
                     .FMenu{
                         
                         &:nth-child(1){
-                            @include flex(45%)
+                            @include flex(45%);
+                            @include maxWidth(767){
+                                @include flex(100%);
+                            }
                         }
                         
                         &:nth-child(2){
                             @include flex(25%);
+                            @include maxWidth(767){
+                                @include flex(48%);
+                            }
+                            @include maxWidth(576){
+                                @include flex(100%);
+                            }
                         }
                         
                         &:nth-child(3){
                             @include flex(20%);
+                            @include maxWidth(767){
+                                @include flex(48%);
+                            }
+                            @include maxWidth(576){
+                                @include flex(100%);
+                            }
                         }
                         
                         ul.Submenu{
@@ -62,12 +94,18 @@
                                     color: $C_WHITE;
                                     font-size: 18px;
                                     margin: 0;
+                                    @include maxWidth(767){
+                                        font-size: 16px;
+                                    }
                                 }
                                 p{
                                     margin: 10px 0;
                                     text-align: justify;
                                     font-size: 16px;
                                     color: $C_WHITE;
+                                    @include maxWidth(767){
+                                        font-size: 14px;
+                                    }
                                 }
                             }
                         }
@@ -75,11 +113,17 @@
                         ul.Hotline{
                             display: flex;
                             flex-direction: column;
+                            @include maxWidth(767){
+                                margin-top: 20px;
+                            }
                             li.title{
                                 margin-bottom: 7px;
                                 span{
                                     font-size: 16px;
                                     color: $C_WHITE;
+                                    @include maxWidth(767){
+                                        font-size: 14px;
+                                    }
                                 }
                             }
                             
@@ -98,6 +142,10 @@
                                         color: $C_WHITE;
                                         font-size: 16px;
                                         font-weight: 500;
+
+                                        @include maxWidth(767){
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
@@ -106,6 +154,9 @@
                         ul.Customer{
                             display: flex;
                             flex-direction: column;
+                            @include maxWidth(767){
+                                margin-top: 20px;
+                            }
                             li.title{
                                 h3{
                                     font-size: 16px;
@@ -127,6 +178,9 @@
                             margin-top: 25px;
                             display: flex;
                             flex-direction: column;
+                            @include maxWidth(767){
+                                margin-top: 20px;
+                            }
                             li.title{
                                 font-size: 16px;
                                 color: $C_WHITE;
@@ -142,12 +196,19 @@
                                         margin-right: 5px;
                                         color: $C_Border;
                                         font-size: 14px;
+
+                                        @include maxWidth(767){
+                                            font-size: 12px;
+                                        }
                                     }
                                     span{
                                         display: block;
                                         font-size: 14px;
                                         color: $C_Border;
                                         line-height: 1;
+                                        @include maxWidth(767){
+                                            font-size: 12px;
+                                        }
                                     }
                                     
                                     &:hover{
@@ -168,8 +229,14 @@
             flex-direction: row;
             justify-content: space-between;
             padding-top: 25px;
+            @include maxWidth(576){
+                flex-direction: column-reverse;
+            }
             .FooterLeft{
                 @include flex(60%);
+                @include maxWidth(576){
+                    @include flex(100%);
+                }
                 ul.Company{
                     display: flex;
                     flex-direction: column;
@@ -189,6 +256,9 @@
             
             .FooterRight{
                 @include flex(30%);
+                @include maxWidth(576){
+                    @include flex(100%);
+                }
                 a{
                     display: inline-flex;
                     align-items: center;

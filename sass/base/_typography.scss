@@ -8,4 +8,15 @@
 
 .font14{
     @include fontSize(14);
+    
+    @include maxWidth(576){
+        @include fontSize(12);
+    }
+}
+.font16{
+    @include fontSize(16);
+
+    @include maxWidth(576){
+        @include fontSize(14);
+    }
 }
