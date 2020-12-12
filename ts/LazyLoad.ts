@@ -17,5 +17,4 @@ const myLazyLoad = new LazyLoad({
     }
 });
 
-
 myLazyLoad.update();
