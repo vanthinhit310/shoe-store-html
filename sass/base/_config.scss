@@ -48,4 +48,8 @@ button{
 
 .PageContent{
     margin-top: 30px;
+    
+    @include maxWidth(991){
+        margin-top: 60px;
+    }
 }

@@ -330,7 +330,7 @@ section.Header.fixed{
     .menu {
         background: $C_BLACK;
         color: $C_WHITE;
-        height: 80px;
+        height: 60px;
         padding: 5px 10px;
         width: 100%;
         position: fixed;
@@ -341,10 +341,18 @@ section.Header.fixed{
         justify-content: space-between;
         align-items: center;
         
+        @include maxWidth(576){
+            height: 50px;
+        }
+        
         a.logo{
             display: inline-flex;
             img{
                 max-width: 150px;
+                
+                @include maxWidth(576){
+                    max-width: 102px;
+                }
             }
         }
     }
@@ -363,10 +371,17 @@ section.Header.fixed{
         
         .cart-count{
             margin-right: 50px;
+            @include maxWidth(576){
+                //margin-right: 40px;
+            }
             span.CartIcon{
                 font-size: 30px;
                 color: $C_WHITE;
                 position: relative;
+                
+                @include maxWidth(576){
+                    font-size: 22px;
+                }
                 
                 span.CartCount{
                     position: absolute;
@@ -383,6 +398,13 @@ section.Header.fixed{
                     text-align: center;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    
+                    @include maxWidth(576){
+                        padding: 1px 4px;
+                        bottom: 15px;
+                        left: 20px;
+                        font-size: 10px;
+                    }
                 }
             }
         }
@@ -392,6 +414,12 @@ section.Header.fixed{
             float: right;
             margin: 0 10px;
             cursor: pointer;
+            
+            @include maxWidth(576){
+                width: 30px;
+                height: 25px;
+                margin: 0;
+            }
         }
     }
 
@@ -403,6 +431,12 @@ section.Header.fixed{
         float: right;
         clear: right;
         margin: 4px 0;
+
+        @include maxWidth(576){
+            width: 30px;
+            margin: 3px 0;
+            height: 3px;
+        }
     }
 
     .hid {
@@ -411,6 +445,10 @@ section.Header.fixed{
         position: absolute;
         background: rgba(0, 0, 0, 0);
         margin: 15px 0 0 0;
+
+        @include maxWidth(576){
+            margin: 12px 0 0 0;
+        }
     }
 
     .hid.animate {
