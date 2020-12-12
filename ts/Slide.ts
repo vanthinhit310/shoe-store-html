@@ -8,6 +8,7 @@ const Slide = {
                     speed: 1500,
                     spaceBetween: 0,
                     loop: true,
+                    effect: 'fade',
                     autoplay: {
                         delay: 5000,
                         disableOnInteraction: false

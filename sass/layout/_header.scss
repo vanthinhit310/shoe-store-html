@@ -357,22 +357,52 @@ section.Header.fixed{
         text-transform: uppercase;
     }
 
-    .menu-btn {
-        width: 50px;
-        height: 50px;
-        float: right;
-        margin: 0 10px;
-        cursor: pointer;
+    .mobile-right{
+        display: inline-flex;
+        align-items: center;
+        
+        .cart-count{
+            margin-right: 50px;
+            span.CartIcon{
+                font-size: 30px;
+                color: $C_WHITE;
+                position: relative;
+                
+                span.CartCount{
+                    position: absolute;
+                    bottom: 20px;
+                    left: 28px;
+                    font-size: 12px;
+                    background-color: $C_WHITE;
+                    padding: 1px 7px;
+                    color: $C_BLACK;
+                    font-weight: 500;
+                    border-radius: 50%;
+                    max-width: 40px;
+                    display: block;
+                    text-align: center;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        .menu-btn {
+            width: 40px;
+            height: 30px;
+            float: right;
+            margin: 0 10px;
+            cursor: pointer;
+        }
     }
 
     .line {
         background: $C_WHITE;
         display: block;
-        width: 50px;
-        height: 5px;
+        width: 40px;
+        height: 3px;
         float: right;
         clear: right;
-        margin: 5px 0;
+        margin: 4px 0;
     }
 
     .hid {
@@ -380,7 +410,7 @@ section.Header.fixed{
         transition: all .2s ease;
         position: absolute;
         background: rgba(0, 0, 0, 0);
-        margin: 20px 0 0 0;
+        margin: 15px 0 0 0;
     }
 
     .hid.animate {
