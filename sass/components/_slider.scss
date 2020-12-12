@@ -13,6 +13,12 @@
         padding: 5px 8px;
         border-radius: 5px;
         @include transition(background-color linear .2s);
+        
+        @include maxWidth(576){
+            max-width: 35px;
+            padding: 5px;
+        }
+        
         svg{
             circle,path{
                 stroke: $C_WHITE;
@@ -32,9 +38,15 @@
     
     .SwiperPrev{
         left: 30px;
+        @include maxWidth(576){
+            left: 15px;
+        }
     }
     
     .SwiperNext{
         right: 30px;
+        @include maxWidth(576){
+            right: 15px;
+        }
     }
 }
