@@ -26,8 +26,7 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({cascade: false}))
         .pipe(concat('common.css'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./css'))
-        .pipe(notify({message: 'Style task complete'}));
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('ts', function () {
@@ -43,8 +42,7 @@ gulp.task('ts', function () {
             "removeComments": true
         }))
         .pipe(uglify())
-        .pipe(gulp.dest('js'))
-        .pipe(notify({message: 'Typescript task complete'}));
+        .pipe(gulp.dest('js'));
 });
 
 gulp.task('image', function () {
@@ -60,15 +58,14 @@ gulp.task('image', function () {
                 ]
             })
         ]))
-        .pipe(gulp.dest('./img'))
-        .pipe(notify({message: 'Image compressed task complete'}));
+        .pipe(gulp.dest('./img'));
 })
 //Gulp 4 phai su dung cu phap gulp series
 gulp.task('watch', function () {
     browserSync.init({
         server: {
             baseDir: "./",
-            index: "views/index.html"
+            index: "views/products.html"
         },
         ghostMode: false
     });
