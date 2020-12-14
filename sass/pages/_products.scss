@@ -1,7 +1,7 @@
 .ProductWrapper {
     .products-wrapper {
         h1.category {
-            @include fontSize(18);
+            @include fontSize(20);
             font-weight: 500;
             text-transform: uppercase;
             margin: 15px 0;
@@ -127,6 +127,73 @@
 
             .product-filter {
                 @include flex(23%);
+                
+                .right-vertical-list{
+                    h2.title{
+                        @include fontSize(20);
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: $C_TEXT;
+                        margin-bottom: 20px;
+                    }
+                    
+                    ul.filter-list{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .item{
+                            margin-bottom: 10px;
+                            
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            a{
+                                display: flex;
+                                text-decoration: none;
+                                justify-content: space-between;
+                                align-items: center;
+                                
+                                span.image{
+                                    max-width: 70px;
+                                    margin-right: 10px;
+                                    overflow: hidden;
+                                    border-radius: 4px;
+                                    img{
+                                        transform: scale(1);
+                                        border-radius: 4px;
+                                        display: block;
+                                        @include transition(transform ease-in-out .2s);
+                                    }
+                                    
+                                    &:hover{
+                                        img{
+                                            border-radius: 4px;
+                                            transform: scale(1.3);
+                                            @include transition(transform ease-in-out .2s);
+                                        }
+                                    }
+                                }
+                                span.info{
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    
+                                    .name{
+                                        @include fontSize(15);
+                                        margin-bottom: 5px;
+                                        color: $C_TEXT;
+                                        font-weight: 500;
+                                    }
+                                    .price{
+                                        font-weight: 400;
+                                        @include fontSize(13);
+                                        color: $C_TEXT;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
