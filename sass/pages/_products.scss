@@ -1,0 +1,133 @@
+.ProductWrapper {
+    .products-wrapper {
+        h1.category {
+            @include fontSize(18);
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 15px 0;
+        }
+
+        .products-content {
+            display: flex;
+            justify-content: space-between;
+
+            .product-list {
+                @include flex(75%);
+
+                .product-grid {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-row-gap: 35px;
+                    grid-column-gap: 35px;
+
+                    .product-item {
+                        position: relative;
+
+                        .product-image {
+                            cursor: pointer;
+                            position: relative;
+                            a {
+                                position: relative;
+                                overflow: hidden;
+                                display: block;
+
+                                img {
+                                    display: block;
+                                }
+
+                                img.front {
+                                    transform: scale(1);
+                                    @include transition(transform ease-in-out .3s);
+                                }
+
+                                img.back {
+                                    position: absolute;
+                                    top: 0;
+                                    left: -100%;
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 1;
+                                    @include transition(all ease-in-out .3s);
+                                }
+                            }
+                            
+                            .discount{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 2;
+                                background-color: $C_TOPBAR_HOVER;
+                                padding: 3px 7px;
+                                span{
+                                    color: $C_WHITE;
+                                    @include fontSize(13);
+                                    font-weight: 400;
+                                }
+                            }
+
+                            &:hover {
+                                a {
+                                    img.front {
+                                        transform: scale(0);
+                                        @include transition(transform ease-in-out .3s);
+                                    }
+
+                                    img.back {
+                                        left: 0;
+                                        @include transition(all ease-in-out .3s);
+                                    }
+                                }
+                            }
+                        }
+                        
+                        h3{
+                            margin: 10px 0;
+                            a{
+                                text-decoration: none;
+                                display: block;
+                                font-weight: 500;
+                                @include fontSize(16);
+                                color: $C_TEXT;
+                            }
+                        }
+                        
+                        .product-color{
+                            font-weight: 400;
+                            @include fontSize(14);
+                            text-transform: uppercase;
+                            margin-bottom: 7px;
+                        }
+                        
+                        .product-price{
+                            display: flex;
+                            align-items: center;
+                            p{
+                                @include fontSize(13);
+                                font-weight: 700;
+                                padding: 0;
+                                margin: 0;
+                            }
+                            
+                            p.main-price{
+                                color: $C_RED;
+                            }
+                            
+                            p.strike-price{
+                                margin-left: 10px;
+                                color: $C_STRIKE;
+                                font-weight: 400;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .product-filter {
+                @include flex(23%);
+            }
+        }
+    }
+}
