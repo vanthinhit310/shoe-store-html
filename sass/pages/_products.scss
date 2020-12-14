@@ -85,17 +85,19 @@
                         h3{
                             margin: 10px 0;
                             a{
+                                color: $C_BLACK;
                                 text-decoration: none;
                                 display: block;
-                                font-weight: 500;
-                                @include fontSize(16);
+                                font-weight: 600;
+                                @include fontSize(15);
                                 color: $C_TEXT;
+                                font-family: $Source;
                             }
                         }
                         
                         .product-color{
                             font-weight: 400;
-                            @include fontSize(14);
+                            @include fontSize(12);
                             text-transform: uppercase;
                             margin-bottom: 7px;
                         }
