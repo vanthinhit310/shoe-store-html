@@ -27,6 +27,7 @@
                         .product-image {
                             cursor: pointer;
                             position: relative;
+
                             a {
                                 position: relative;
                                 overflow: hidden;
@@ -52,15 +53,16 @@
                                     @include transition(all ease-in-out .45s);
                                 }
                             }
-                            
-                            .discount{
+
+                            .discount {
                                 position: absolute;
                                 top: 0;
                                 left: 0;
                                 z-index: 2;
                                 background-color: $C_TOPBAR_HOVER;
                                 padding: 3px 7px;
-                                span{
+
+                                span {
                                     color: $C_WHITE;
                                     @include fontSize(13);
                                     font-weight: 400;
@@ -81,10 +83,11 @@
                                 }
                             }
                         }
-                        
-                        h3{
+
+                        h3 {
                             margin: 10px 0;
-                            a{
+
+                            a {
                                 color: $C_BLACK;
                                 text-decoration: none;
                                 display: block;
@@ -94,29 +97,30 @@
                                 font-family: $Source;
                             }
                         }
-                        
-                        .product-color{
+
+                        .product-color {
                             font-weight: 400;
                             @include fontSize(12);
                             text-transform: uppercase;
                             margin-bottom: 7px;
                         }
-                        
-                        .product-price{
+
+                        .product-price {
                             display: flex;
                             align-items: center;
-                            p{
+
+                            p {
                                 @include fontSize(13);
                                 font-weight: 700;
                                 padding: 0;
                                 margin: 0;
                             }
-                            
-                            p.main-price{
+
+                            p.main-price {
                                 color: $C_RED;
                             }
-                            
-                            p.strike-price{
+
+                            p.strike-price {
                                 margin-left: 10px;
                                 color: $C_STRIKE;
                                 font-weight: 400;
@@ -129,9 +133,9 @@
 
             .product-filter {
                 @include flex(23%);
-                
-                .categories-list{
-                    h2{
+
+                .categories-list {
+                    h2 {
                         @include fontSize(20);
                         font-weight: 600;
                         text-transform: uppercase;
@@ -139,14 +143,16 @@
                         font-family: $Source;
                         margin: 0;
                     }
-                    
-                    ul.categories-list{
+
+                    ul.categories-list {
                         display: flex;
                         flex-direction: column;
                         padding: 10px 0 20px;
-                        li{
+
+                        li {
                             cursor: pointer;
-                            a{
+
+                            a {
                                 padding: 5px 0;
                                 border-radius: 4px;
                                 display: flex;
@@ -154,15 +160,17 @@
                                 align-items: center;
                                 background-color: $C_WHITE;
                                 @include transition(background-color .25s linear);
-                                span{
+
+                                span {
                                     display: block;
                                     text-transform: uppercase;
                                     color: $C_TEXT;
                                 }
-                                
-                                .text{
+
+                                .text {
                                     @include fontSize(14);
-                                    svg,i{
+
+                                    svg, i {
                                         margin-right: 5px;
                                     }
                                 }
@@ -170,9 +178,9 @@
                         }
                     }
                 }
-                
-                .right-vertical-list{
-                    h2.title{
+
+                .right-vertical-list {
+                    h2.title {
                         @include fontSize(20);
                         font-weight: 600;
                         text-transform: uppercase;
@@ -180,63 +188,67 @@
                         margin-bottom: 20px;
                         font-family: $Source;
                     }
-                    
-                    ul.filter-list{
+
+                    ul.filter-list {
                         display: flex;
                         flex-direction: column;
-                        
-                        .item{
+
+                        .item {
                             padding: 30px 0;
                             border-top: dashed 1px $C_Border;
-                            
-                            &:first-child{
+
+                            &:first-child {
                                 padding-top: 0;
                                 border-top: none;
                             }
-                            
-                            &:last-child{
+
+                            &:last-child {
                                 margin-bottom: 0;
                             }
-                            a{
+
+                            a {
                                 display: flex;
                                 text-decoration: none;
                                 justify-content: space-between;
                                 align-items: center;
-                                
-                                span.image{
+
+                                span.image {
                                     max-width: 70px;
                                     margin-right: 10px;
                                     overflow: hidden;
                                     border-radius: 4px;
                                     border: solid 1px $C_Border;
                                     display: block;
-                                    img{
+
+                                    img {
                                         transform: scale(1);
                                         border-radius: 4px;
                                         display: block;
                                         @include transition(transform ease-in-out .2s);
                                     }
-                                    
-                                    &:hover{
-                                        img{
+
+                                    &:hover {
+                                        img {
                                             border-radius: 4px;
                                             transform: scale(1.3);
                                             @include transition(transform ease-in-out .2s);
                                         }
                                     }
                                 }
-                                span.info{
+
+                                span.info {
                                     width: 100%;
                                     display: flex;
                                     flex-direction: column;
-                                    
-                                    .name{
+
+                                    .name {
                                         @include fontSize(15);
                                         margin-bottom: 5px;
                                         color: $C_TEXT;
                                         font-weight: 500;
                                     }
-                                    .price{
+
+                                    .price {
                                         font-style: italic;
                                         font-weight: 400;
                                         @include fontSize(13);
@@ -250,5 +262,23 @@
                 }
             }
         }
+    }
+}
+
+[data-toggle="collapse"] .fa:before {
+    content: "\f106";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f107";
+}
+.collapsing {
+    transition-property: height, visibility;
+    transition-duration: 0.4s;
+}
+@media (prefers-reduced-motion: reduce) {
+    .collapsing {
+        transition-property: height, visibility;
+        transition-duration: 0.4s;
     }
 }
