@@ -953,224 +953,391 @@
 
                     <!--Content in panel right-->
                     <div class="product-filter">
-                        <div class="filter">
-                            <h2 class="title">Lọc sản phẩm</h2>
-                            <div id="accordion">
-                                <div class="card">
-                                    <div class="card-header" id="brand-title">
-                                        <h5 class="mb-0">
-                                            <button data-toggle="collapse" data-target="#brand" aria-expanded="true" aria-controls="brand">
-                                                <span class="text">Thương hiệu</span>
-                                                <span class="icon">
-                                                    <i class="fa" aria-hidden="true"></i>
-                                                </span>
-                                            </button>
-                                        </h5>
-                                    </div>
+                        <form action="#" method="GET">
+                            <div class="filter">
+                                <h2 class="title">Lọc sản phẩm</h2>
+                                <div id="accordion">
+                                    <div class="card">
+                                        <div class="card-header" id="brand-title">
+                                            <h5 class="mb-0">
+                                                <button data-toggle="collapse" data-target="#brand" aria-expanded="true" aria-controls="brand">
+                                                    <span class="text">Thương hiệu</span>
+                                                    <span class="icon">
+                                                        <i class="fa" aria-hidden="true"></i>
+                                                    </span>
+                                                </button>
+                                            </h5>
+                                        </div>
 
-                                    <div id="brand" class="collapse show" aria-labelledby="brand-title" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                            ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-                                            probably haven't heard of them accusamus labore sustainable VHS.
+                                        <div id="brand" class="collapse show" aria-labelledby="brand-title" data-parent="#accordion">
+                                            <div class="filter-content">
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="vo" name="fruit-1" value="Apple">
+                                                    <label for="vo">Vớ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="day" name="fruit-1" value="Apple">
+                                                    <label for="day">Dây</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="dep-nam" name="fruit-1" value="Apple">
+                                                    <label for="dep-nam">Dép nam</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="dep-nu" name="fruit-1" value="Apple">
+                                                    <label for="dep-nu">Dép nữ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="giay-boot-nu" name="fruit-1" value="Apple">
+                                                    <label for="giay-boot-nu">Giày Boot Nữ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="giay-boot-nam" name="fruit-1" value="Apple">
+                                                    <label for="giay-boot-nam">Giày Boot Nam</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="giay-bup-be" name="fruit-1" value="Apple">
+                                                    <label for="giay-bup-be">Giày búp bê</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="giay-cao-got" name="fruit-1" value="Apple">
+                                                    <label for="giay-cao-got">Giày Cao Gót</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="giay-moi-nam" name="fruit-1" value="Apple">
+                                                    <label for="giay-moi-nam">Giày mọi nam</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="giay-moi-nu" name="fruit-1" value="Apple">
+                                                    <label for="giay-moi-nu">Giày mọi nữ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="giay-oxford" name="fruit-1" value="Apple">
+                                                    <label for="giay-oxford">Giày Oxford</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="sandal-nam" name="fruit-1" value="Apple">
+                                                    <label for="sandal-nam">Giày Sandal Nam</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="sandal-nu" name="fruit-1" value="Apple">
+                                                    <label for="sandal-nu">Giày Sandal Nữ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="slipon-nam" name="fruit-1" value="Apple">
+                                                    <label for="slipon-nam">Giày Slipon Nam</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="slipon-nu" name="fruit-1" value="Apple">
+                                                    <label for="slipon-nu">Giày Slipon nữ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="thanh-lich" name="fruit-1" value="Apple">
+                                                    <label for="thanh-lich">Giày Thanh Lịch</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="tt-nam" name="fruit-1" value="Apple">
+                                                    <label for="tt-nam">Giày Thể Thao Nam</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="tt-nu" name="fruit-1" value="Apple">
+                                                    <label for="tt-nu">Giày Thể Thao Nữ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="ao-bra" name="fruit-1" value="Apple">
+                                                    <label for="ao-bra">Áo Bra</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="croptop" name="fruit-1" value="Apple">
+                                                    <label for="croptop">Áo Croptop</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="ao-khoac-cap" name="fruit-1" value="Apple">
+                                                    <label for="ao-khoac-cap">Áo Khoác Cặp</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="ao-khoac" name="fruit-1" value="Apple">
+                                                    <label for="ao-khoac">Áo Khoác</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="hoodie" name="fruit-1" value="Apple">
+                                                    <label for="hoodie">Áo Hoodie</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="ao-thun-tay-ngan" name="fruit-1" value="Apple">
+                                                    <label for="ao-thun-tay-ngan">Áo Thun Tay Ngắn</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="tank-top" name="fruit-1" value="Apple">
+                                                    <label for="tank-top">Áo Tanktop</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="balo" name="fruit-1" value="Apple">
+                                                    <label for="balo">Balô</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="quan-dai" name="fruit-1" value="Apple">
+                                                    <label for="quan-dai">Quần Dài</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="jogger" name="fruit-1" value="Apple">
+                                                    <label for="jogger">Quần Jogger</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="quan-lung" name="fruit-1" value="Apple">
+                                                    <label for="quan-lung">Quần Lửng</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="khac" name="fruit-1" value="Apple">
+                                                    <label for="khac">Khác</label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="color-title">
-                                        <h5 class="mb-0">
-                                            <button class="collapsed" data-toggle="collapse" data-target="#color" aria-expanded="false" aria-controls="color">
-                                                <span class="text">Màu sắc</span>
-                                                <span class="icon">
-                                                    <i class="fa" aria-hidden="true"></i>
-                                                </span>
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="color" class="collapse" aria-labelledby="color-title" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                            ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-                                            probably haven't heard of them accusamus labore sustainable VHS.
+                                    <div class="card">
+                                        <div class="card-header" id="color-title">
+                                            <h5 class="mb-0">
+                                                <button class="collapsed" data-toggle="collapse" data-target="#color" aria-expanded="false" aria-controls="color">
+                                                    <span class="text">Màu sắc</span>
+                                                    <span class="icon">
+                                                        <i class="fa" aria-hidden="true"></i>
+                                                    </span>
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="color" class="collapse" aria-labelledby="color-title" data-parent="#accordion">
+                                            <div class="filter-content">
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="trang" name="fruit-1" value="Apple">
+                                                    <label for="trang">Trắng</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="den" name="fruit-1" value="Apple">
+                                                    <label for="den">Đen</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="vang" name="fruit-1" value="Apple">
+                                                    <label for="vang">Vàng</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="cam" name="fruit-1" value="Apple">
+                                                    <label for="cam">Cam</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="do" name="fruit-1" value="Apple">
+                                                    <label for="do">Đỏ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="xanh-la" name="fruit-1" value="Apple">
+                                                    <label for="xanh-la">Xanh lá</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="xanh-duong" name="fruit-1" value="Apple">
+                                                    <label for="xanh-duong">Xanh Dương</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="tim" name="fruit-1" value="Apple">
+                                                    <label for="tim">Tím</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="xam" name="fruit-1" value="Apple">
+                                                    <label for="xam">Xám</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="nau" name="fruit-1" value="Apple">
+                                                    <label for="nau">Nâu</label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="price-title">
-                                        <h5 class="mb-0">
-                                            <button class="collapsed" data-toggle="collapse" data-target="#price" aria-expanded="false" aria-controls="price">
-                                                <span class="text">Giá</span>
-                                                <span class="icon">
-                                                    <i class="fa" aria-hidden="true"></i>
-                                                </span>
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="price" class="collapse" aria-labelledby="price-title" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                            ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-                                            probably haven't heard of them accusamus labore sustainable VHS.
+                                    <div class="card">
+                                        <div class="card-header" id="price-title">
+                                            <h5 class="mb-0">
+                                                <button class="collapsed" data-toggle="collapse" data-target="#price" aria-expanded="false" aria-controls="price">
+                                                    <span class="text">Giá</span>
+                                                    <span class="icon">
+                                                        <i class="fa" aria-hidden="true"></i>
+                                                    </span>
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="price" class="collapse" aria-labelledby="price-title" data-parent="#accordion">
+                                            <div class="filter-content">
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="small-than-100" name="fruit-1" value="Apple">
+                                                    <label for="small-than-100">Dưới 100.000đ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="from-100-to-300" name="fruit-1" value="Apple">
+                                                    <label for="from-100-to-300">100.000đ - 300.000đ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="from-300-to-500" name="fruit-1" value="Apple">
+                                                    <label for="from-300-to-500">300.000đ - 500.000đ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="from-500-to-1m" name="fruit-1" value="Apple">
+                                                    <label for="from-500-to-1m" >500.000đ - 1.000.000đ</label>
+                                                </div>
+                                                <div class="checkbox-custom">
+                                                    <input type="checkbox" id="large-than-1m" name="fruit-1" value="Apple">
+                                                    <label for="large-than-1m">Trên 1.000.000đ</label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="categories-list">
-                            <h2 class="title">Danh mục sản phẩm</h2>
+                            <div class="categories-list">
+                                <h2 class="title">Danh mục sản phẩm</h2>
 
-                            <ul class="categories-list">
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>Giày nữ</span>
-                                        <span class="icon"><i class="fal fa-angle-down"></i></span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>GIÀY NAM</span>
-                                        <span class="icon"><i class="fal fa-angle-down"></i></span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>SALE 79K</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>SALE 150K</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>SALE 100K</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>Phụ Kiện</span>
-                                        <span class="icon"><i class="fal fa-angle-down"></i></span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>BALO - TÚI</span>
-                                        <span class="icon"><i class="fal fa-angle-down"></i></span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="text"><i class="fal fa-angle-right"></i>ÁO KHOÁC</span>
-                                        <span class="icon"><i class="fal fa-angle-down"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="featured-products right-vertical-list">
-                            <h2 class="title">Sản phẩm hot</h2>
-                            <ul class="filter-list">
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name font15">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="font15 price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name font15">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="font15 price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name font15">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="font15 price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name font15">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="font15 price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="lasted-products right-vertical-list">
-                            <h2 class="title">Sản phẩm mới</h2>
-                            <ul class="filter-list">
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name font15">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="font15 price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name font15">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="font15 price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0);">
-                                        <span class="image">
-                                            <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
-                                        </span>
-                                        <span class="info">
-                                            <span class="name font15">Dép nữ MWC NUDE- 3257</span>
-                                            <span class="font15 price">195.000đ</span>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                <ul class="categories-list">
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>Giày nữ</span>
+                                            <span class="icon"><i class="fal fa-angle-down"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>GIÀY NAM</span>
+                                            <span class="icon"><i class="fal fa-angle-down"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>SALE 79K</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>SALE 150K</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>SALE 100K</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>Phụ Kiện</span>
+                                            <span class="icon"><i class="fal fa-angle-down"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>BALO - TÚI</span>
+                                            <span class="icon"><i class="fal fa-angle-down"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="text"><i class="fal fa-angle-right"></i>ÁO KHOÁC</span>
+                                            <span class="icon"><i class="fal fa-angle-down"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured-products right-vertical-list">
+                                <h2 class="title">Sản phẩm hot</h2>
+                                <ul class="filter-list">
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name font15">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="font15 price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name font15">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="font15 price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name font15">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="font15 price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name font15">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="font15 price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lasted-products right-vertical-list">
+                                <h2 class="title">Sản phẩm mới</h2>
+                                <ul class="filter-list">
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name font15">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="font15 price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name font15">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="font15 price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0);">
+                                            <span class="image">
+                                                <img class="img-fluid w-100 lazy" data-src="../img/page/product/mwc2.jpg" alt="Image">
+                                            </span>
+                                            <span class="info">
+                                                <span class="name font15">Dép nữ MWC NUDE- 3257</span>
+                                                <span class="font15 price">195.000đ</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
                     </div>
                     <!--Content in panel right-->
                 </div>
