@@ -128,13 +128,25 @@
             .product-filter {
                 @include flex(23%);
                 
-                .right-vertical-list{
-                    h2.title{
+                .categories-list{
+                    h2{
                         @include fontSize(20);
-                        font-weight: 500;
+                        font-weight: 600;
                         text-transform: uppercase;
                         color: $C_TEXT;
                         margin-bottom: 20px;
+                        font-family: $Source;
+                    }
+                }
+                
+                .right-vertical-list{
+                    h2.title{
+                        @include fontSize(20);
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: $C_TEXT;
+                        margin-bottom: 20px;
+                        font-family: $Source;
                     }
                     
                     ul.filter-list{
@@ -197,6 +209,7 @@
                                         font-weight: 400;
                                         @include fontSize(13);
                                         color: $C_TEXT;
+                                        font-family: $Source;
                                     }
                                 }
                             }
