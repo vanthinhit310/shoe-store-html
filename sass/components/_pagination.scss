@@ -1,0 +1,56 @@
+.page-paginate{
+    margin: 30px;
+    text-align: center;
+    
+    ul.paginate{
+        display: inline-flex;
+        border: 0 solid $C_Border;
+        border-width: 0 0 1px 1px;
+        border-radius: 4px;
+        li{
+            border: 0 solid $C_Border;
+            border-width: 1px 1px 0 0;
+            padding:.5em 1em;
+            cursor: pointer;
+            background-color: $C_WHITE;
+            @include transition(background-color linear .2s);
+            
+            &:first-child{
+                border-radius: 4px 0 0 4px;
+            }
+            &:last-child{
+                border-radius: 0 4px 4px 0;
+            }
+            a{
+                line-height: 1;
+                text-decoration: none;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: $C_TEXT;
+                @include fontSize(12);
+                @include transition(color linear .2s);
+            }
+            
+            &:hover{
+                background-color: $C_EBG;
+                a{
+                    color: $C_TEXT;
+                }
+            }
+        }
+        
+        li.current{
+            background-color: $C_TOPBAR_HOVER;
+            a{
+                color: $C_WHITE;
+            }
+        }
+        
+        li.disabled{
+            a{
+                pointer-events: none;
+            }
+        }
+    }
+}
