@@ -264,21 +264,3 @@
         }
     }
 }
-
-[data-toggle="collapse"] .fa:before {
-    content: "\f106";
-}
-
-[data-toggle="collapse"].collapsed .fa:before {
-    content: "\f107";
-}
-.collapsing {
-    transition-property: height, visibility;
-    transition-duration: 0.4s;
-}
-@media (prefers-reduced-motion: reduce) {
-    .collapsing {
-        transition-property: height, visibility;
-        transition-duration: 0.4s;
-    }
-}

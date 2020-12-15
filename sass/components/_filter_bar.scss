@@ -66,6 +66,12 @@
             padding: 10px;
             text-align: center;
             background-color: $C_EBG;
+            text-align: left;
+        }
+        
+        #brand-title{
+            border-top: 1px solid rgba(0,0,0,.125);
+            border-radius: 0;
         }
         
         .card{
@@ -97,5 +103,38 @@
                 padding: 10px 0;
             }
         }
+    }
+}
+
+
+[data-toggle="collapse"] .fa:before {
+    content: "\f106";
+}
+
+[data-toggle="collapse"]{
+    svg,i{
+        @include transition(transform .2s linear);
+    }
+}
+
+/*[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f107";
+}*/
+
+[data-toggle="collapse"].collapsed {
+    svg,i{
+        line-height: 0;
+        transform: rotate(-180deg);
+        @include transition(transform .2s linear);
+    }
+}
+.collapsing {
+    transition-property: height, visibility;
+    transition-duration: 0.4s;
+}
+@media (prefers-reduced-motion: reduce) {
+    .collapsing {
+        transition-property: height, visibility;
+        transition-duration: 0.4s;
     }
 }
