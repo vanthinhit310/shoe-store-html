@@ -1,0 +1,98 @@
+.checkbox-custom{
+    input[type=checkbox] + label {
+        display: inline-flex;
+        align-items: center;
+        margin: 2px 20px;
+        cursor: pointer;
+        padding: 0.2em;
+        line-height: 1;
+    }
+
+    input[type=checkbox] {
+        display: none;
+    }
+
+    input[type=checkbox] + label:before {
+        content: "\2714";
+        border: 1px solid $C_BLACK;
+        border-radius: 0.2em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-right: 5px;
+        vertical-align: bottom;
+        color: transparent;
+        transition: .3s;
+    }
+
+    input[type=checkbox] + label:active:before {
+        transform: scale(0);
+    }
+
+    input[type=checkbox]:checked + label:before {
+        background-color: MediumSeaGreen;
+        border-color: MediumSeaGreen;
+        color: $C_WHITE;
+    }
+
+    input[type=checkbox]:disabled + label:before {
+        transform: scale(1);
+        border-color: #aaa;
+    }
+
+    input[type=checkbox]:checked:disabled + label:before {
+        transform: scale(1);
+        background-color: #bfb;
+        border-color: #bfb;
+    }
+}
+
+.product-filter{
+    .filter{
+        border: solid 1px $C_Border;
+        
+        h2.title{
+            @include fontSize(20);
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $C_TEXT;
+            font-family: $Source;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            background-color: $C_EBG;
+        }
+        
+        .card{
+            border: none;
+            border-radius: 0;
+            .card-header{
+                padding: 0;
+                h5{
+                    margin: 0;
+                    button{
+                        padding: 10px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        
+                        span{
+                            color: $C_TEXT;
+                            @include fontSize(13);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            .filter-content{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
