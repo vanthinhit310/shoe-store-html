@@ -5,7 +5,7 @@
         margin: 2px 20px;
         cursor: pointer;
         padding: 0.2em;
-        line-height: 1;
+        @include fontSize(14);
     }
 
     input[type=checkbox] {
@@ -34,8 +34,8 @@
     }
 
     input[type=checkbox]:checked + label:before {
-        background-color: MediumSeaGreen;
-        border-color: MediumSeaGreen;
+        background-color: $C_BLACK;
+        border-color: $C_BLACK;
         color: $C_WHITE;
     }
 
@@ -54,6 +54,7 @@
 .product-filter{
     .filter{
         border: solid 1px $C_Border;
+        margin-bottom: 25px;
         
         h2.title{
             @include fontSize(20);
@@ -72,6 +73,7 @@
             border-radius: 0;
             .card-header{
                 padding: 0;
+                
                 h5{
                     margin: 0;
                     button{
@@ -92,6 +94,7 @@
             .filter-content{
                 display: flex;
                 flex-direction: column;
+                padding: 10px 0;
             }
         }
     }
