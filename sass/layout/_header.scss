@@ -34,8 +34,7 @@
                 ul.Menu {
                     display: flex;
                     flex-direction: row;
-                    align-items: flex-end;
-                    justify-content: flex-end;
+                    align-items: center;
 
                     li.MenuItem {
                         flex: 1;
@@ -69,8 +68,8 @@
                     li.CartText {
                         a {
                             display: flex;
-                            align-items: flex-end !important;
-                            justify-content: flex-end;
+                            align-items: center !important;
+                            justify-content: center;
                             span.CartIcon {
                                 display: block;
                                 position: relative;
