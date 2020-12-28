@@ -1,18 +1,43 @@
 .ProductWrapper {
     .products-wrapper {
-        h1.category {
-            @include fontSize(20);
-            font-weight: 500;
-            text-transform: uppercase;
-            margin: 15px 0;
+        .product-page-title{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            .filter-title{
+                @include fontSize(20);
+                font-weight: 500;
+                text-transform: uppercase;
+                margin: 15px 0;
+                @include maxWidth(767){
+                    @include fontSize(15);
+                }
+               a{
+                   display: block;
+                   color: $C_TEXT;
+               }
+            }
         }
 
         .products-content {
             display: flex;
             justify-content: space-between;
+            
+            @include maxWidth(576){
+                flex-direction: column; 
+            }
 
             .product-list {
                 @include flex(75%);
+                
+                @include maxWidth(991){
+                    @include flex(65%);
+                }
+                @include maxWidth(576){
+                    @include flex(100%);
+                }
 
                 .product-grid {
                     width: 100%;
@@ -22,8 +47,13 @@
                     grid-column-gap: 35px;
                     
                     @include maxWidth(991){
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: repeat(2, 1fr);
                         grid-gap: 30px;
+                    }
+
+                    @include maxWidth(991){
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-gap: 15px;
                     }
 
                     .product-item {
@@ -138,6 +168,14 @@
 
             .product-filter {
                 @include flex(23%);
+
+                @include maxWidth(991){
+                    @include flex(32%);
+                }
+
+                @include maxWidth(576){
+                    @include flex(100%);
+                }
 
                 .categories-list {
                     h2 {
@@ -265,6 +303,74 @@
                         }
                     }
                 }
+
+                form{
+                    div.filter{
+                        @include maxWidth(767){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.toggle-filter{
+    position: relative;
+    a{
+        display: block;
+    }
+    
+    .__filterMobile{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        width: calc(100vw - 30px);
+        
+        .card{
+            border-radius: 0;
+            border: 0;
+            .card-header{
+                border-radius: 0;
+                h5{
+                    button{
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                        display: flex;
+                        justify-content: space-between;
+                        @include fontSize(15);
+                        width: 100%;
+                        cursor: pointer;
+                        span{
+                            display: block;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .filter-content{
+            padding: 10px 0;
+            
+            .checkbox-custom{
+                label{
+                    text-transform: none;
+                }
+            }
+        }
+        
+        .__close_filter_popup{
+            button{
+                color: $C_RED;
+                width: 100%;
+                padding: 12px;
+                background: $C_EBG;
+                font-weight: 600;
+                text-transform: uppercase;
             }
         }
     }
