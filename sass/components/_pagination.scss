@@ -2,6 +2,10 @@
     margin: 30px;
     text-align: center;
     
+    @include maxWidth(576){
+        margin: 15px auto;
+    }
+    
     ul.paginate{
         display: inline-flex;
         border: 0 solid $C_Border;
@@ -14,6 +18,10 @@
             cursor: pointer;
             background-color: $C_WHITE;
             @include transition(background-color linear .2s);
+            
+            @include maxWidth(767){
+                padding: 0.25em 0.75em;
+            }
             
             &:first-child{
                 border-radius: 4px 0 0 4px;

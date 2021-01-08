@@ -328,6 +328,9 @@
         right: 0;
         z-index: 3;
         width: calc(100vw - 30px);
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         
         .card{
             border-radius: 0;
@@ -341,7 +344,7 @@
                         box-shadow: none;
                         display: flex;
                         justify-content: space-between;
-                        @include fontSize(15);
+                        @include fontSize(13);
                         width: 100%;
                         cursor: pointer;
                         span{
@@ -369,9 +372,18 @@
                 width: 100%;
                 padding: 12px;
                 background: $C_EBG;
-                font-weight: 600;
                 text-transform: uppercase;
+                @include fontSize(13);
+                cursor: pointer;
             }
         }
+    }
+}
+
+.toggle-filter.open{
+    .__filterMobile{
+        opacity: 1;
+        visibility: visible;
+        @include animation(popIn, 600ms);
     }
 }
