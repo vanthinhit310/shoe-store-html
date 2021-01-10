@@ -1,65 +1,68 @@
-.detail-content{
+.detail-content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
-    .top{
+
+    .top {
         display: flex;
         width: 100%;
         align-items: flex-start;
         justify-content: space-between;
-        
-        .product-image{
-            @include flex(35%);
-            
-            .main-image{
+
+        .product-image {
+            @include flex(40%);
+
+            .main-image {
                 padding: 10px;
                 border-radius: 4px;
                 border: solid 1px $C_EBG;
                 overflow: hidden;
-                img{
+
+                img {
                     display: block;
                     cursor: pointer;
                 }
             }
         }
-        
-        .product-info{
-            @include flex(35%);
-            
-            &__name{
+
+        .product-info {
+            @include flex(30%);
+
+            &__name {
                 @include fontSize(18);
                 font-weight: 600;
                 padding: 0;
                 margin: 0;
             }
-            
-            &__price{
+
+            &__price {
                 @include fontSize(30);
                 color: $C_ed4545;
             }
-            
-            &__size{
-                ul{
+
+            &__size {
+                ul {
                     margin: 0;
                     padding: 0;
                     display: inline-flex;
                     flex-direction: column;
-                    li.size-item{
+
+                    li.size-item {
                         display: flex;
                         align-items: center;
                         padding: 8px 0;
                         border-top: solid 1px $C_Border;
-                        
-                        p.text{
+
+                        p.text {
                             @include fontSize(14);
                             margin: 0;
-                            
-                            .code{
+
+                            .code {
                                 margin-right: 25px;
                             }
                         }
-                        a{
+
+                        a {
                             margin-left: 25px;
                             display: inline-flex;
                             align-items: center;
@@ -73,35 +76,41 @@
                     }
                 }
             }
-            
-            &__color{
+
+            &__color {
                 margin-top: 30px;
                 padding: 15px 0;
                 border-top: solid 1px $C_EBG;
-                p.title{
+
+                p.title {
                     font-weight: 600;
                     @include fontSize(14);
                     margin-bottom: 5px;
                 }
-                
-                ul{
+
+                ul {
                     display: inline-flex;
-                    li.color{
+
+                    li.color {
                         margin-right: 10px;
-                        &:last-child{
+
+                        &:last-child {
                             margin-right: 0;
                         }
-                        a{
+
+                        a {
                             display: inline-flex;
                             flex-direction: column;
                             justify-content: center;
                             padding: 3px 5px;
                             border: solid 1px $C_Border;
-                            img{
+
+                            img {
                                 display: block;
                                 max-width: 60px;
                             }
-                            span{
+
+                            span {
                                 display: block;
                                 @include fontSize(11);
                                 color: $C_TEXT;
@@ -112,28 +121,102 @@
                             }
                         }
                     }
-                    li.color.active{
+
+                    li.color.active {
                         background-image: url(../img/page/detail/checked.png);
                         background-repeat: no-repeat;
                         background-position: right bottom;
-                        a{
+
+                        a {
                             border-color: $C_ed4545;
                         }
                     }
                 }
             }
-            
-            &__tutorial{
-                a{
+
+            &__tutorial {
+                a {
                     display: inline-flex;
                     @include fontSize(12);
                     color: $C_TEXT;
                 }
             }
         }
-        
-        .privacy-sale{
-            @include flex(25%)
+
+        .privacy-sale {
+            @include flex(25%);
+
+            ul {
+                li.title {
+                    border-top: solid 1px $C_Border;
+                    background-color: $C_EBG;
+                    padding: 10px 15px;
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        display: block;
+                    }
+
+                    .green-text {
+                        text-transform: uppercase;
+                        color: $C_green;
+                        font-weight: 600;
+                        @include fontSize(14);
+                    }
+
+                    .black-text {
+                        @include fontSize(14);
+                    }
+                }
+
+                .privacy {
+                    padding: 10px 0;
+                    border-bottom: solid 1px $C_Border;
+                    
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        img {
+                            display: block;
+                            max-width: 38px;
+                            filter: opacity(.7);
+                        }
+
+                        p {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 0 0 10px;
+
+                            strong {
+                                display: block;
+                                @include fontSize(14);
+                                color: $C_BLACK;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                line-height: 1;
+                                margin-bottom: 5px;
+                            }
+
+                            span {
+                                display: block;
+                                @include fontSize(13);
+                                line-height: 1;
+                                color: $C_TEXT;
+                            }
+                            .red-text{
+                                @include fontSize(20);
+                                font-weight: 600;
+                                color: $C_ed4545;
+                                margin: 0 0 5px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
