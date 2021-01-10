@@ -219,4 +219,116 @@
             }
         }
     }
+    
+    .bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .post-content{
+            @include flex(70%);
+            margin: 35px 0;
+            border: solid 1px $C_EBG;
+            border-top: solid 3px $C_Border;
+            
+            .title{
+                font-weight: 600;
+                @include fontSize(18);
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                background-color: $C_EBG;
+                padding: 10px 15px;
+            }
+            .content{
+                padding: 15px;
+                font-size: 14px !important;
+            }
+            
+        }
+        
+        .related{
+            @include flex(27%);
+            margin-top: 35px;
+
+            h2.title {
+                @include fontSize(20);
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $C_TEXT;
+                margin-bottom: 20px;
+                font-family: $Source;
+            }
+
+            ul.filter-list {
+                display: flex;
+                flex-direction: column;
+
+                .item {
+                    padding: 30px 0;
+                    border-top: dashed 1px $C_Border;
+
+                    &:first-child {
+                        padding-top: 0;
+                        border-top: none;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        display: flex;
+                        text-decoration: none;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        span.image {
+                            max-width: 70px;
+                            margin-right: 10px;
+                            overflow: hidden;
+                            border-radius: 4px;
+                            border: solid 1px $C_Border;
+                            display: block;
+
+                            img {
+                                transform: scale(1);
+                                border-radius: 4px;
+                                display: block;
+                                @include transition(transform ease-in-out .2s);
+                            }
+
+                            &:hover {
+                                img {
+                                    border-radius: 4px;
+                                    transform: scale(1.3);
+                                    @include transition(transform ease-in-out .2s);
+                                }
+                            }
+                        }
+
+                        span.info {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .name {
+                                @include fontSize(15);
+                                margin-bottom: 5px;
+                                color: $C_TEXT;
+                                font-weight: 500;
+                            }
+
+                            .price {
+                                font-style: italic;
+                                font-weight: 400;
+                                @include fontSize(13);
+                                color: $C_TEXT;
+                                font-family: $Source;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

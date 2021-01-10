@@ -80,3 +80,9 @@ $(window).scroll(function () {
 
     }
 });
+
+// @ts-ignore
+$(function () {
+    // @ts-ignore
+    $('[data-toggle="tooltip"]').tooltip();
+})
