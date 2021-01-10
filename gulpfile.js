@@ -65,7 +65,7 @@ gulp.task('watch', function () {
     browserSync.init({
         server: {
             baseDir: "./",
-            index: "views/product-detail.html"
+            index: "views/news-detail.html"
         },
         ghostMode: false
     });
