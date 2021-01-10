@@ -59,12 +59,12 @@
 
                         img {
                             transform: scale(1);
-                            @include animation(all linear .2s);
+                            @include transition(all linear .2s);
                         }
 
                         &:hover {
                             img {
-                                transform: scale(1.3);
+                                transform: scale(1.15);
                             }
                         }
                     }
