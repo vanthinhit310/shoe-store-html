@@ -67,12 +67,19 @@
                     padding: 0;
                     display: inline-flex;
                     flex-direction: column;
+                    @include maxWidth(480){
+                        width: 100%;
+                    }
 
                     li.size-item {
                         display: flex;
                         align-items: center;
                         padding: 8px 0;
                         border-top: solid 1px $C_Border;
+                        @include maxWidth(480){
+                            padding: 12px 0;
+                            justify-content: space-between;
+                        }
 
                         p.text {
                             @include fontSize(14);
@@ -91,8 +98,11 @@
                             padding: 2px 8px;
                             color: $C_WHITE;
                             background-color: $C_d61c1f;
-                            border-radius: 4px;
                             @include fontSize(11);
+                            @include maxWidth(480){
+                                margin-left: 0;
+                                @include fontSize(14);
+                            }
                         }
                     }
                 }
@@ -261,6 +271,7 @@
             margin: 35px 0;
             border: solid 1px $C_EBG;
             border-top: solid 3px $C_Border;
+            text-align: justify;
 
             @include maxWidth(767){
                 @include flex(100%);

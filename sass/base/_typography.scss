@@ -20,3 +20,11 @@
         @include fontSize(14);
     }
 }
+
+.font25{
+    @include fontSize(25);
+
+    @include maxWidth(576){
+        @include fontSize(20);
+    }
+}
