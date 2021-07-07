@@ -1,0 +1,119 @@
+.Topbar {
+    background-color: $C_BLACK;
+    .TopbarContent {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .Left {
+            @include flex(25%);
+        }
+
+        .Right {
+            @include flex(60%);
+            
+            @include maxWidth(1200){
+                @include flex(70%);
+            }
+        }
+
+        ul.Topbar {
+            display: flex;
+            width: 100%;
+            align-items: center;
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    span {
+                        line-height: 1;
+                        display: block;
+                        color: $C_WHITE;
+                    }
+                }
+            }
+        }
+
+        ul.TopbarLeft {
+            li.ContactItem {
+                a {
+                    padding: 0 15px;
+                    border-right: solid 1px $C_WHITE;
+                    span.Icon {
+                        margin-right: 10px;
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        border-right: unset;
+                    }
+                }
+            }
+        }
+
+        ul.TopbarRight {
+            justify-content: flex-end;
+
+            li.TopbarItem {
+                padding: 12px 15px;
+                border-right: solid 1px $C_WHITE;
+
+                &:last-child {
+                    border-right: unset;
+                }
+            }
+        }
+        
+        @include maxWidth(991){
+            display: none;
+        }
+    }
+}
+
+li.HasDropdown {
+    position: relative;
+    cursor: pointer;
+
+    ul.DropdownMenu {
+        background-color: $C_333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 2;
+        min-width: 250px;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.8s;
+        -moz-transition: max-height 0.8s;
+        transition: max-height 0.8s;
+
+        li.DropMenuItem {
+            padding: 10px;
+            border-bottom: solid 1px $C_BLACK_BORDER;
+            cursor: pointer;
+            @include transition(background-color ease-in-out 0.2s);
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                span {
+                    display: block;
+                }
+            }
+
+            &:hover {
+                background-color: $C_TOPBAR_HOVER;
+            }
+        }
+    }
+
+    &:hover{
+        ul.DropdownMenu{
+            max-height: 250px;
+        }
+    }
+}

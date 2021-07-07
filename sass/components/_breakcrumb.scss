@@ -1,0 +1,30 @@
+.breakcrumb{
+    margin-bottom: 20px;
+    ul.breakcrumb{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        li{
+            position: relative;
+            display: flex;
+            align-items: center;
+            &:before{
+                content: '/';
+                padding: 0 5px;
+            }
+            &:first-child{
+                &:before{
+                    content: none;
+                }
+            }
+            a{
+                display: inline-flex;
+                align-items: center;
+                color: $C_TEXT;
+                span{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

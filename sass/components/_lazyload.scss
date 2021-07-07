@@ -1,0 +1,37 @@
+/*Config for lazy load image*/
+img.lazy {
+    opacity: 0;
+    height: auto;
+}
+img:not(.initial) {
+    @include transition(opacity linear .5s);
+}
+img.initial,
+img.loaded,
+img.error {
+    opacity: 1;
+}
+img:not([src]):not([srcset]) {
+    visibility: hidden;
+}
+/*Config for lazy load image*/
+
+.image{
+    position: relative;
+    
+    img.loader{
+        display: block;
+        @include centerAbsolute(both);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all linear .2s);
+        max-width: 15%;
+    }
+}
+
+.image.lazy-loading{
+    img.loader{
+        opacity: 1;
+        visibility: visible;
+    }
+}

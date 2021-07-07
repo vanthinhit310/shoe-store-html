@@ -1,0 +1,93 @@
+.news-detail-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    @include maxWidth(991){
+        flex-direction: column;
+    }
+
+    .post-content {
+        @include flex(72%);
+        @include maxWidth(991){
+            @include flex(100%);
+        }
+
+        h1.title {
+            font-weight: normal;
+            margin: 0 0 10px;
+        }
+
+        .content {
+            text-align: justify;
+            @include fontSize(14);
+
+            p {
+                margin-bottom: 5px;
+            }
+
+            img {
+                margin-bottom: 7px;
+            }
+        }
+
+    }
+
+    .popular-post {
+        @include flex(25%);
+        @include maxWidth(991){
+            @include flex(100%);
+        }
+
+        h2.title {
+            @include fontSize(18);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li.orther-item {
+                margin-bottom: 15px;
+                @include maxWidth(991){
+                    margin-bottom: 25px;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+
+                    span.image {
+                        display: block;
+                        margin-bottom: 7px;
+                        overflow: hidden;
+
+                        img {
+                            transform: scale(1);
+                            @include transition(all linear .2s);
+                        }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.15);
+                            }
+                        }
+                    }
+
+                    .name {
+                        @include fontSize(14);
+                        color: $C_TEXT;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}

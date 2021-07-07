@@ -1,0 +1,272 @@
+// File: _header.scss
+// File này chứa tất cả code Sass style cho footer.
+/* STYLES GO HERE */
+
+.Footer{
+    background-color: $C_111;
+    padding: 20px 0;
+    
+    .FooterWrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        .FooterTop{
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            a.Logo{
+                display: block;
+                margin-bottom: 8px;
+                text-align: center;
+                img{
+                    max-width: 189px;
+                    
+                    @include maxWidth(767){
+                        max-width: 150px;
+                    }
+                    @include maxWidth(576){
+                        max-width: 102px;
+                    }
+                }
+            }
+            h3.FooterSlogan{
+                font-size: 30px;
+                color: $C_WHITE;
+                font-weight: 600;
+
+                @include maxWidth(767){
+                    font-size: 24px;
+                }
+                @include maxWidth(576){
+                    font-size: 18px;
+                }
+            }
+            
+            .FooterMenu{
+                ul.Footer{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: solid 2px $C_WHITE;
+                    @include maxWidth(767){
+                        flex-wrap: wrap;
+                    }
+                    
+                    .FMenu{
+                        
+                        &:nth-child(1){
+                            @include flex(45%);
+                            @include maxWidth(767){
+                                @include flex(100%);
+                            }
+                        }
+                        
+                        &:nth-child(2){
+                            @include flex(25%);
+                            @include maxWidth(767){
+                                @include flex(48%);
+                            }
+                            @include maxWidth(576){
+                                @include flex(100%);
+                            }
+                        }
+                        
+                        &:nth-child(3){
+                            @include flex(20%);
+                            @include maxWidth(767){
+                                @include flex(48%);
+                            }
+                            @include maxWidth(576){
+                                @include flex(100%);
+                            }
+                        }
+                        
+                        ul.Submenu{
+                            display: flex;
+                            flex-direction: column;
+                            li.Text{
+                                label{
+                                    font-weight: 600;
+                                    color: $C_WHITE;
+                                    font-size: 18px;
+                                    margin: 0;
+                                    @include maxWidth(767){
+                                        font-size: 16px;
+                                    }
+                                }
+                                p{
+                                    margin: 10px 0;
+                                    text-align: justify;
+                                    font-size: 16px;
+                                    color: $C_WHITE;
+                                    @include maxWidth(767){
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        ul.Hotline{
+                            display: flex;
+                            flex-direction: column;
+                            @include maxWidth(767){
+                                margin-top: 20px;
+                            }
+                            li.title{
+                                margin-bottom: 7px;
+                                span{
+                                    font-size: 16px;
+                                    color: $C_WHITE;
+                                    @include maxWidth(767){
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            
+                            li.Phone{
+                                a{
+                                    display: inline-flex;
+                                    align-items: center;
+                                    svg{
+                                        max-width: 25px;
+                                        width: 100%;
+                                        margin-right: 2px;
+                                        fill: $C_WHITE;
+                                    }
+                                    span{
+                                        display: block;
+                                        color: $C_WHITE;
+                                        font-size: 16px;
+                                        font-weight: 500;
+
+                                        @include maxWidth(767){
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        ul.Customer{
+                            display: flex;
+                            flex-direction: column;
+                            @include maxWidth(767){
+                                margin-top: 20px;
+                            }
+                            li.title{
+                                h3{
+                                    font-size: 16px;
+                                    color: $C_WHITE;
+                                    margin-bottom: 7px;
+                                }
+                            }
+                            
+                            li.Link{
+                                a{
+                                    display: block;
+                                    font-size: 14px;
+                                    color: $C_Border;
+                                }
+                            }
+                        }
+                        
+                        ul.Menu{
+                            margin-top: 25px;
+                            display: flex;
+                            flex-direction: column;
+                            @include maxWidth(767){
+                                margin-top: 20px;
+                            }
+                            li.title{
+                                font-size: 16px;
+                                color: $C_WHITE;
+                                font-weight: 500;
+                                margin-bottom: 10px;
+                            }
+                            
+                            li.MenuItem{
+                                a{
+                                    display: inline-flex;
+                                    align-items: center;
+                                    svg,i{
+                                        margin-right: 5px;
+                                        color: $C_Border;
+                                        font-size: 14px;
+
+                                        @include maxWidth(767){
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    span{
+                                        display: block;
+                                        font-size: 14px;
+                                        color: $C_Border;
+                                        line-height: 1;
+                                        @include maxWidth(767){
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    
+                                    &:hover{
+                                        svg,i{
+                                            @include animation(spinIn, 800ms, 1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .FooterBottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 25px;
+            @include maxWidth(576){
+                flex-direction: column-reverse;
+            }
+            .FooterLeft{
+                @include flex(60%);
+                @include maxWidth(576){
+                    @include flex(100%);
+                }
+                ul.Company{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    li{
+                        a{
+                            display: inline-block;
+                            span{
+                                text-align: justify;
+                                display: block;
+                                color: $C_WHITE;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .FooterRight{
+                @include flex(30%);
+                @include maxWidth(576){
+                    @include flex(100%);
+                }
+                a{
+                    display: inline-flex;
+                    align-items: center;
+                    img{
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

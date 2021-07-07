@@ -1,0 +1,523 @@
+// File: _header.scss
+// File này chứa tất cả code Sass style cho header.
+/* STYLES GO HERE */
+.MainMenuWrapper {
+    @include maxWidth(991){
+        display: none;
+    }
+    .MainMenuContent {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        .Logo {
+            @include flex(15%);
+            a{
+                display: block;
+                img{
+                    display: block;
+                    width: 100%;
+                    max-width: 189px;
+                }
+            }
+            
+        }
+
+        .RightMenu {
+            @include flex(70%);
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+
+            .Top {
+                ul.Menu {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    li.MenuItem {
+                        flex: 1;
+
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                            padding: 10px 0;
+
+                            span {
+                                display: block;
+                            }
+
+                            span.Icon {
+                                img {
+                                    display: block;
+                                    margin: 0 auto;
+                                    max-width: 50px;
+                                }
+                            }
+                            span.Text {
+                                font-family: $Roboto;
+                                font-weight: 500;
+                                color: $C_373737;
+                            }
+                        }
+                    }
+
+                    li.CartText {
+                        a {
+                            display: flex;
+                            align-items: center !important;
+                            justify-content: center;
+                            span.CartIcon {
+                                display: block;
+                                position: relative;
+                                color: $C_373737;
+
+                                svg,
+                                i {
+                                    font-size: 20px;
+                                }
+
+                                .CartCount {
+                                    display: block;
+                                    background-color: $C_373737;
+                                    color: $C_WHITE;
+                                    padding: 1px 5px;
+                                    border-radius: 15px;
+                                    font-family: $Roboto;
+                                    font-size: 11px;
+                                    position: absolute;
+                                    bottom: 75%;
+                                    left: 75%;
+                                    z-index: 1;
+                                }
+                            }
+                            
+                            @include maxWidth(1200){
+                                justify-content: center !important;
+                                align-items: center !important;
+                            }
+                        }
+                    }
+
+                    li.HasDropdownMenu{
+                        position: relative;
+                        
+                        .DropdownMenu{
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background-color: $C_WHITE;
+                            visibility: hidden; /* hides sub-menu */
+                            opacity: 0;
+                            transform: translateY(-2em);
+                            z-index: 2;
+                            transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+                            ul.Dropdown{
+                                width: 200px;
+                                -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                -moz-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                border-top: none;
+                                .DropdownItem{
+                                    padding: 8px 15px;
+                                    background-color: $C_WHITE;
+                                    @include transition(background-color linear .15s);
+                                    cursor: pointer;
+                                    a{
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        font-family: $Roboto;
+                                        padding: 0;
+                                        text-align: left;
+                                        span{
+                                            display: block;
+                                            text-transform: uppercase;
+                                            color: $C_373737;
+                                            
+                                            svg,i{
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                    &:hover{
+                                        background-color: $C_EBG;
+                                    }
+                                }
+                                
+                                .HasSubMenu{
+                                    position: relative;
+                                    .SubMenuContent{
+                                        position: absolute;
+                                        top: 0;
+                                        left: 100%;
+                                        background-color: $C_WHITE;
+                                        visibility: hidden; /* hides sub-menu */
+                                        opacity: 0;
+                                        transform: translateX(10px);
+                                        z-index: 2;
+                                        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+                                        ul.SubMenu{
+                                            width: 200px;
+                                            -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                            -moz-box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                            box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+                                            .SubMenuItem{
+                                                padding: 8px 15px;
+                                                background-color: $C_WHITE;
+                                                @include transition(background-color linear .15s);
+                                                cursor: pointer;
+                                                a{
+                                                    display: flex;
+                                                    align-items: flex-start;
+                                                    justify-content: flex-start;
+                                                    font-family: $Roboto;
+                                                    padding: 0;
+                                                    text-align: left;
+                                                    span{
+                                                        display: block;
+                                                        text-transform: uppercase;
+                                                        color: $C_373737;
+
+                                                        svg,i{
+                                                            margin-right: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                &:hover{
+                                                    background-color: $C_EBG;
+                                                }
+                                            }
+
+                                            .HasSubMenu{
+                                                position: relative;
+
+                                            }
+                                        }
+                                    }
+
+                                    &:hover{
+                                        .SubMenuContent{
+                                            visibility: visible; /* shows sub-menu */
+                                            opacity: 1;
+                                            transform: translateX(0%);
+                                            transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        &:hover{
+                            .DropdownMenu{
+                                visibility: visible; /* shows sub-menu */
+                                opacity: 1;
+                                transform: translateY(0%);
+                                transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            .Bot {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: right;
+
+                .SearchBar {
+                    @include flex(65%);
+
+                    .Input {
+                        width: 100%;
+                        display: flex;
+                        position: relative;
+                        border: solid 1px $C_Border;
+                        padding: 5px 15px;
+                        border-radius: 40px;
+
+                        input {
+                            outline: none;
+                            box-shadow: none;
+                            color: $C_555;
+                            border: none;
+                            line-height: 1;
+                        }
+                    }
+                    
+                    @include maxWidth(1200){
+                        @include flex(50%);
+                    }
+                }
+
+                .Hotline {
+                    @include flex(30%);
+                    margin-left: 40px;
+                    a {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        span {
+                            display: block;
+                            color: $C_373737;
+                        }
+
+                        .Icon {
+                            margin-right: 5px;
+                            background-color: $C_EBG;
+                            padding: 7px 12px;
+                            border-radius: 50%;
+                            font-size: 12px;
+                        }
+                    }
+
+                    @include maxWidth(1200){
+                        @include flex(45%);
+                    }
+                }
+            }
+            
+            @include maxWidth(1200){
+                @include flex(80%);
+            }
+        }
+    }
+}
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+section.Header.fixed{
+    .MainMenuWrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 3;
+        background-color: $C_WHITE;
+        height: auto;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        animation: smoothScroll 1s forwards;
+        .RightMenu{
+            .Bot{
+                @include transition(all linear .3s);
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+            }
+        }
+    }
+}
+
+
+.menu-mobile{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    .menu {
+        background: $C_BLACK;
+        color: $C_WHITE;
+        height: 60px;
+        padding: 5px 10px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include maxWidth(576){
+            height: 50px;
+        }
+        
+        a.logo{
+            display: inline-flex;
+            img{
+                max-width: 150px;
+                
+                @include maxWidth(576){
+                    max-width: 102px;
+                }
+            }
+        }
+    }
+
+    .menu-txt {
+        margin: 8px 0 0 5px;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .mobile-right{
+        display: inline-flex;
+        align-items: center;
+        
+        .cart-count{
+            margin-right: 50px;
+            @include maxWidth(576){
+                //margin-right: 40px;
+            }
+            span.CartIcon{
+                font-size: 30px;
+                color: $C_WHITE;
+                position: relative;
+                
+                @include maxWidth(576){
+                    font-size: 22px;
+                }
+                
+                span.CartCount{
+                    position: absolute;
+                    bottom: 20px;
+                    left: 28px;
+                    font-size: 12px;
+                    background-color: $C_WHITE;
+                    padding: 1px 7px;
+                    color: $C_BLACK;
+                    font-weight: 500;
+                    border-radius: 50%;
+                    max-width: 40px;
+                    display: block;
+                    text-align: center;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    
+                    @include maxWidth(576){
+                        padding: 1px 4px;
+                        bottom: 15px;
+                        left: 20px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        .menu-btn {
+            width: 40px;
+            height: 30px;
+            float: right;
+            margin: 0 10px;
+            cursor: pointer;
+            
+            @include maxWidth(576){
+                width: 30px;
+                height: 25px;
+                margin: 0;
+            }
+        }
+    }
+
+    .line {
+        background: $C_WHITE;
+        display: block;
+        width: 40px;
+        height: 3px;
+        float: right;
+        clear: right;
+        margin: 4px 0;
+
+        @include maxWidth(576){
+            width: 30px;
+            margin: 3px 0;
+            height: 3px;
+        }
+    }
+
+    .hid {
+        transform: rotateZ(225deg);
+        transition: all .2s ease;
+        position: absolute;
+        background: rgba(0, 0, 0, 0);
+        margin: 15px 0 0 0;
+
+        @include maxWidth(576){
+            margin: 12px 0 0 0;
+        }
+    }
+
+    .hid.animate {
+        background: $C_WHITE;
+        transform: rotateZ(315deg);
+        transition: all .25s ease .2s;
+    }
+
+    .second {
+        transform: rotateZ(0deg);
+        transition: all .5s ease;
+        background: $C_WHITE;
+    }
+
+    .second.animate {
+        transform: rotateZ(225deg);
+        transition: all .5s ease;
+    }
+
+    .first,
+    .third {
+        transition: all .5s ease-out;
+    }
+
+    .third {
+        left: 0;
+        float: left;
+    }
+
+    .first.animate,
+    .third.animate {
+        width: 0;
+        transition: all .3s ease-out;
+    }
+
+    .slideout {
+        display: block;
+        background: $C_BLACK;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: -100%;
+        z-index: 6;
+        height: 100vh;
+        @include transition(left ease-out .3s);
+    }
+    
+    .slideout.open{
+        left: 0;
+        @include transition(left ease-in .3s);
+    }
+
+    .slideout li:first-child {
+        border-top: thin solid #333;
+    }
+
+    .slideout li {
+        color: $C_WHITE;
+        padding: 19px;
+        border-bottom: thin solid #333;
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+
+    .slideout li:hover {
+        background: #151515;
+        transition: all .2s ease;
+
+    }
+}

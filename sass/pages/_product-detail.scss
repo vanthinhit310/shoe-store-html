@@ -1,0 +1,389 @@
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .top {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        
+        @include maxWidth(991){
+            flex-direction: column;
+        }
+
+        .product-image {
+            @include flex(40%);
+
+            @include maxWidth(991){
+                @include flex(100%);
+            }
+
+            .main-image {
+                padding: 10px;
+                border-radius: 4px;
+                border: solid 1px $C_EBG;
+                overflow: hidden;
+
+                span{
+                    @include maxWidth(991){
+                        width: 100%;
+                    }
+                }
+                img {
+                    display: block;
+                    cursor: zoom-in;
+                }
+            }
+        }
+
+        .product-info {
+            @include flex(30%);
+
+            @include maxWidth(991){
+                @include flex(100%);
+            }
+
+            &__name {
+                @include fontSize(18);
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+                
+                @include maxWidth(991){
+                    margin-top: 20px;
+                }
+            }
+
+            &__price {
+                @include fontSize(30);
+                color: $C_ed4545;
+            }
+
+            &__size {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: inline-flex;
+                    flex-direction: column;
+                    @include maxWidth(480){
+                        width: 100%;
+                    }
+
+                    li.size-item {
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 0;
+                        border-top: solid 1px $C_Border;
+                        @include maxWidth(480){
+                            padding: 12px 0;
+                            justify-content: space-between;
+                        }
+
+                        p.text {
+                            @include fontSize(14);
+                            margin: 0;
+
+                            .code {
+                                margin-right: 25px;
+                            }
+                        }
+
+                        a {
+                            margin-left: 25px;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 2px 8px;
+                            color: $C_WHITE;
+                            background-color: $C_d61c1f;
+                            @include fontSize(11);
+                            @include maxWidth(480){
+                                margin-left: 0;
+                                @include fontSize(14);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__color {
+                margin-top: 30px;
+                padding: 15px 0;
+                border-top: solid 1px $C_EBG;
+
+                p.title {
+                    font-weight: 600;
+                    @include fontSize(14);
+                    margin-bottom: 5px;
+                }
+
+                ul {
+                    display: inline-flex;
+
+                    li.color {
+                        margin-right: 10px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            display: inline-flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 3px 5px;
+                            border: solid 1px $C_Border;
+
+                            img {
+                                display: block;
+                                max-width: 60px;
+                            }
+
+                            span {
+                                display: block;
+                                @include fontSize(11);
+                                color: $C_TEXT;
+                                text-transform: uppercase;
+                                text-align: center;
+                                margin-top: 7px;
+                                line-height: 1;
+                            }
+                        }
+                    }
+
+                    li.color.active {
+                        background-image: url(../img/page/detail/checked.png);
+                        background-repeat: no-repeat;
+                        background-position: right bottom;
+
+                        a {
+                            border-color: $C_ed4545;
+                        }
+                    }
+                }
+            }
+
+            &__tutorial {
+                @include maxWidth(991){
+                    margin-bottom: 20px;
+                }
+                a {
+                    display: inline-flex;
+                    @include fontSize(12);
+                    color: $C_TEXT;
+                }
+            }
+        }
+
+        .privacy-sale {
+            @include flex(25%);
+            @include maxWidth(991){
+                @include flex(100%);
+            }
+
+            ul {
+                li.title {
+                    border-top: solid 1px $C_Border;
+                    background-color: $C_EBG;
+                    padding: 10px 15px;
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        display: block;
+                    }
+
+                    .green-text {
+                        text-transform: uppercase;
+                        color: $C_green;
+                        font-weight: 600;
+                        @include fontSize(14);
+                    }
+
+                    .black-text {
+                        @include fontSize(14);
+                    }
+                }
+
+                .privacy {
+                    padding: 10px 0;
+                    border-bottom: solid 1px $C_Border;
+                    
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        img {
+                            display: block;
+                            max-width: 38px;
+                            filter: opacity(.7);
+                        }
+
+                        p {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 0 0 10px;
+
+                            strong {
+                                display: block;
+                                @include fontSize(14);
+                                color: $C_BLACK;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                line-height: 1;
+                                margin-bottom: 5px;
+                            }
+
+                            span {
+                                display: block;
+                                @include fontSize(13);
+                                line-height: 1;
+                                color: $C_TEXT;
+                            }
+                            .red-text{
+                                @include fontSize(20);
+                                font-weight: 600;
+                                color: $C_ed4545;
+                                margin: 0 0 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        @include maxWidth(767){
+            flex-direction: column;
+        }
+        
+        .post-content{
+            @include flex(70%);
+            margin: 35px 0;
+            border: solid 1px $C_EBG;
+            border-top: solid 3px $C_Border;
+            text-align: justify;
+
+            @include maxWidth(767){
+                @include flex(100%);
+            }
+            
+            .title{
+                font-weight: 600;
+                @include fontSize(18);
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                background-color: $C_EBG;
+                padding: 10px 15px;
+            }
+            .content{
+                padding: 15px;
+                font-size: 14px !important;
+            }
+            
+        }
+        
+        .related{
+            @include flex(27%);
+            margin-top: 35px;
+
+            @include maxWidth(767){
+                @include flex(100%);
+                margin-top: 0;
+            }
+
+            h2.title {
+                @include fontSize(20);
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $C_TEXT;
+                margin-bottom: 20px;
+                font-family: $Source;
+            }
+
+            ul.filter-list {
+                display: flex;
+                flex-direction: column;
+
+                .item {
+                    padding: 30px 0;
+                    border-top: dashed 1px $C_Border;
+                    
+                    @include maxWidth(767){
+                        padding: 15px 0;
+                    }
+
+                    &:first-child {
+                        padding-top: 0;
+                        border-top: none;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        display: flex;
+                        text-decoration: none;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        span.image {
+                            max-width: 70px;
+                            margin-right: 10px;
+                            overflow: hidden;
+                            border-radius: 4px;
+                            border: solid 1px $C_Border;
+                            display: block;
+
+                            img {
+                                transform: scale(1);
+                                border-radius: 4px;
+                                display: block;
+                                @include transition(transform ease-in-out .2s);
+                            }
+
+                            &:hover {
+                                img {
+                                    border-radius: 4px;
+                                    transform: scale(1.3);
+                                    @include transition(transform ease-in-out .2s);
+                                }
+                            }
+                        }
+
+                        span.info {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .name {
+                                @include fontSize(15);
+                                margin-bottom: 5px;
+                                color: $C_TEXT;
+                                font-weight: 500;
+                            }
+
+                            .price {
+                                font-style: italic;
+                                font-weight: 400;
+                                @include fontSize(13);
+                                color: $C_TEXT;
+                                font-family: $Source;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

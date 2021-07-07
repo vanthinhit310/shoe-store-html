@@ -1,0 +1,43 @@
+.button{
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background-color: unset;
+    background-image: unset;
+    text-shadow: none;
+    padding: 10px;
+    font-size: 12px;
+    font-family: $Roboto;
+    font-weight: 500;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        display: block;
+        line-height: 1;
+    }
+    img{
+        display: block;
+    }
+    svg{
+        display: block;
+    }
+}
+.black-button{
+    background-color: $C_BLACK;
+    color: $C_WHITE;
+    span{
+        color: $C_WHITE;
+    }
+    svg{
+        max-width: 15px;
+        margin-right: 3px;
+        width: 100%;
+        circle,path{
+            stroke: $C_WHITE;
+            fill: $C_WHITE;
+        }
+    }
+}

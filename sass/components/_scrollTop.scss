@@ -1,0 +1,19 @@
+.FloatButton{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    button.ScrollToTop{
+        padding: 8px 10px;
+        border-radius: 5px;
+        background-color: $C_TOPBAR_HOVER;
+        svg,i{
+            color: $C_WHITE;
+            font-size: 20px;
+        }
+        
+        &:hover{
+            svg,i{@include animation(popIn, 2000ms,1);}
+        }
+    }
+}
