@@ -1,0 +1,61 @@
+body {
+    font-family: $Roboto;
+    line-height: 1.5;
+    font-weight: 400;
+    @include fontSize(15);
+    color: $C_TEXT;
+    background-color: $C_WHITE;
+}
+
+
+.container {
+    @media (min-width: 1600px) {
+        max-width: 1500px;
+    }
+    @media (min-width: 1200px) and (max-width: 1599px) {
+        max-width: 95%;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        max-width: 100%;
+    }
+    @media (min-width: 320px) and (max-width: 991px) {
+        max-width: 100%;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+* {
+    outline: none !important;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    box-shadow: none;
+    background-color: unset;
+    border: none;
+}
+
+.PageContent {
+    margin-top: 30px;
+
+    @include maxWidth(991) {
+        margin-top: 60px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    @include maxWidth(576) {
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,52 @@
+.SlideRelative{
+    position: relative;
+    width: 100%;
+    
+    .SwiperNavigation{
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        width: 100%;
+        max-width: 50px;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,.4);
+        padding: 5px 8px;
+        border-radius: 5px;
+        @include transition(background-color linear .2s);
+        
+        @include maxWidth(576){
+            max-width: 35px;
+            padding: 5px;
+        }
+        
+        svg{
+            circle,path{
+                stroke: $C_WHITE;
+                @include transition(stroke linear .2s);
+            }
+        }
+        
+        &:hover{
+            background-color: rgba(255,255,255,.8);
+            svg{
+                circle,path{
+                    stroke: $C_BLACK;
+                }
+            }
+        }
+    }
+    
+    .SwiperPrev{
+        left: 30px;
+        @include maxWidth(576){
+            left: 15px;
+        }
+    }
+    
+    .SwiperNext{
+        right: 30px;
+        @include maxWidth(576){
+            right: 15px;
+        }
+    }
+}
